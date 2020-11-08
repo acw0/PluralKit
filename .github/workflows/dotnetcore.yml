@@ -31,4 +31,4 @@ jobs:
     - name: Build and test with dotnet
       run: dotnet test --configuration Release
       env:
-        - "PluralKit:Database=Host=localhost;Username=postgres;Password=postgres;Database=postgres;Maximum Pool Size=1000"
+        "PluralKit:Database": "Host=localhost;Username=postgres;Password=postgres;Database=postgres;Maximum Pool Size=1000"
