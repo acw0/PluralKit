@@ -39,6 +39,14 @@ namespace PluralKit.Core
             return conn.QuerySingleAsync<int>(query.ToString(), new {Id = id});
         }
 
+        public Task<int> GetSystemGroupCount(IPKConnection conn, SystemId id, PrivacyLevel? privacyFilter = null)
+        {
+            var query = new StringBuilder("select count(*) from groups where system = @Id");
+            if (privacyFilter != null)
+                query.Append($" and visibility = {(int) privacyFilter.Value}");
+            return conn.QuerySingleAsync<int>(query.ToString(), new {Id = id});
+        }
+
         public async Task<PKSystem> CreateSystem(IPKConnection conn, string? systemName = null)
         {
             var system = await conn.QuerySingleAsync<PKSystem>(
