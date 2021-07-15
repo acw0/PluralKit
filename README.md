@@ -1,1 +1,1 @@
-This repository is a GitHub fork of [PluralKit](https://github.com/xSke/PluralKit) used for spiral's in-progress work. Please see the main repository or select a local branch.
+This repository is a GitHub fork of [PluralKit](https://github.com/xSke/PluralKit) used for spiral's in-progress work. Please see the main repository or [select a local branch](https://github.com/spiralw/PluralKit/branches/all).
